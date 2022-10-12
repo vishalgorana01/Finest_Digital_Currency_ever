@@ -16,7 +16,7 @@ let text_node_4 = document.createElement("h5");
 text_node_4.innerHTML = "contact us";
 
 
-nav_ul.children[0].children[0].style.top = `-15px`;
+nav_ul.children[0].children[0].style.transform = `translateY(-14px)`;
 nav_ul.children[0].appendChild(text_node);
 
 nav_ul.children[1].appendChild(text_node_1);
@@ -31,16 +31,21 @@ text_node_3.style.display = 'none';
 nav_ul.children[4].appendChild(text_node_4);
 text_node_4.style.display = 'none';
 
-hover_circle.style.left = `${nav_ul.children[0].offsetLeft - 8}px`;
+hover_circle.style.transition = 'all 0.4s';
+hover_circle.style.transform = `translateX(5px)`;
 
+for(let i=0; i<=4; i++){
+    nav_ul.children[i].children[0].style.transition = 'all 1s';
+}
 
 nav_ul.children[0].addEventListener("mouseover", function () {
-    hover_circle.style.left = `${nav_ul.children[0].offsetLeft - 8}px`;
-    nav_ul.children[0].children[0].style.top = `-15px`;
-    nav_ul.children[1].children[0].style.top = `0px`;
-    nav_ul.children[2].children[0].style.top = `0px`;
-    nav_ul.children[3].children[0].style.top = `0px`;
-    nav_ul.children[4].children[0].style.top = `0px`;
+    // hover_circle.style.left = `${nav_ul.children[0].offsetLeft - 8}px`;
+    hover_circle.style.transform = `translateX(5px)`
+    nav_ul.children[0].children[0].style.transform = `translateY(-14px)`;
+    nav_ul.children[1].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[2].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[3].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[4].children[0].style.transform = `translateY(0px)`;
 
     text_node.style.display = 'block';
     text_node_1.style.display = 'none';
@@ -51,12 +56,13 @@ nav_ul.children[0].addEventListener("mouseover", function () {
 })
 
 nav_ul.children[1].addEventListener("mouseover", function () {
-    hover_circle.style.left = `${nav_ul.children[1].offsetLeft}px`;
-    nav_ul.children[0].children[0].style.top = `0px`;
-    nav_ul.children[1].children[0].style.top = `-15px`;
-    nav_ul.children[2].children[0].style.top = `0px`;
-    nav_ul.children[3].children[0].style.top = `0px`;
-    nav_ul.children[4].children[0].style.top = `0px`;
+    // hover_circle.style.transform = `translateX(${nav_ul.children[1].offsetLeft}px)`;
+    hover_circle.style.transform = `translateX(66px)`;
+    nav_ul.children[0].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[1].children[0].style.transform = `translateY(-16px)`;
+    nav_ul.children[2].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[3].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[4].children[0].style.transform = `translateY(0px)`;
 
     text_node.style.display = 'none';
     text_node_1.style.display = 'block';
@@ -66,12 +72,13 @@ nav_ul.children[1].addEventListener("mouseover", function () {
 })
 
 nav_ul.children[2].addEventListener("mouseover", function () {
-    hover_circle.style.left = `${nav_ul.children[2].offsetLeft - 3}px`;
-    nav_ul.children[0].children[0].style.top = `0px`;
-    nav_ul.children[1].children[0].style.top = `0px`;
-    nav_ul.children[2].children[0].style.top = `-15px`;
-    nav_ul.children[3].children[0].style.top = `0px`;
-    nav_ul.children[4].children[0].style.top = `0px`;
+    // hover_circle.style.left = `${nav_ul.children[2].offsetLeft - 3}px`;
+    hover_circle.style.transform = `translateX(117px)`;
+    nav_ul.children[0].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[1].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[2].children[0].style.transform = `translateY(-14px)`;
+    nav_ul.children[3].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[4].children[0].style.transform = `translateY(0px)`;
 
     text_node.style.display = 'none';
     text_node_1.style.display = 'none';
@@ -82,12 +89,13 @@ nav_ul.children[2].addEventListener("mouseover", function () {
 
 nav_ul.children[3].addEventListener("mouseover", function () {
     // hover_circle.style.backgroundColor = 'blue';
-    hover_circle.style.left = `${nav_ul.children[3].offsetLeft + 6}px`;
-    nav_ul.children[0].children[0].style.top = `0px`;
-    nav_ul.children[1].children[0].style.top = `0px`;
-    nav_ul.children[2].children[0].style.top = `0px`;
-    nav_ul.children[3].children[0].style.top = `-15px`;
-    nav_ul.children[4].children[0].style.top = `0px`;
+    // hover_circle.style.left = `${nav_ul.children[3].offsetLeft + 6}px`;
+    hover_circle.style.transform = `translateX(170px)`;
+    nav_ul.children[0].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[1].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[2].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[3].children[0].style.transform = `translateY(-14px)`;
+    nav_ul.children[4].children[0].style.transform = `translateY(0px)`;
 
     text_node.style.display = 'none';
     text_node_1.style.display = 'none';
@@ -97,12 +105,13 @@ nav_ul.children[3].addEventListener("mouseover", function () {
 })
 
 nav_ul.children[4].addEventListener("mouseover", function () {
-    hover_circle.style.left = `${nav_ul.children[4].offsetLeft + 6}px`;
-    nav_ul.children[0].children[0].style.top = `0px`;
-    nav_ul.children[1].children[0].style.top = `0px`;
-    nav_ul.children[2].children[0].style.top = `0px`;
-    nav_ul.children[3].children[0].style.top = `0px`;
-    nav_ul.children[4].children[0].style.top = `-15px`;
+    // hover_circle.style.left = `${nav_ul.children[4].offsetLeft + 6}px`;
+    hover_circle.style.transform = `translateX(221px)`;
+    nav_ul.children[0].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[1].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[2].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[3].children[0].style.transform = `translateY(0px)`;
+    nav_ul.children[4].children[0].style.transform = `translateY(-14px)`;
 
     text_node.style.display = 'none';
     text_node_1.style.display = 'none';
